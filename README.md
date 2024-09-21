@@ -1,6 +1,8 @@
 # AieetCode Mastery Roadmap
 
-![AIeetCode Logo](img/AIEETCODE_LOGO.png)
+<div align="center">
+  <img src="img/AIEETCODE_LOGO.png" alt="AIeetCode Logo">
+</div>
 
 Welcome to the AIeetCode Mastery Roadmap! This repository is designed to help you become a strong software engineer by systematically covering essential topics through curated LeetCode problems.
 
