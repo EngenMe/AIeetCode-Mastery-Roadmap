@@ -1,4 +1,4 @@
-# AieetCode Mastery Roadmap
+# AIeetCode Mastery Roadmap
 
 <div align="center">
   <img src="img/AIEETCODE_LOGO.png" alt="AIeetCode Logo">
