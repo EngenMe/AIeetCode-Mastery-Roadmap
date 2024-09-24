@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>AIeetCode Mastery Roadmap - Level 1 Week 2</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        line-height: 1.6;
+      }
+      h1 {
+        color: #2e8b57;
+      }
+      h2 {
+        color: #556b2f;
+      }
+      h3 {
+        color: #6a5acd;
+      }
+      pre {
+        background-color: #f4f4f4;
+        padding: 10px;
+        border-radius: 5px;
+        overflow: auto;
+      }
+      code {
+        background-color: #f4f4f4;
+        padding: 2px 4px;
+        border-radius: 3px;
+      }
+      ul {
+        margin-left: 20px;
+      }
+      hr {
+        border: none;
+        height: 1px;
+        background-color: #ccc;
+        margin: 40px 0;
+      }
+      a {
+        color: #2e8b57;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Level 1: Foundations (Easy)</h1>
+    <h2>Week 2: Linked Lists</h2>
+
+    <p>
+      This week focuses on singly linked list operations, traversal, and basic
+      manipulations.
+    </p>
+
+    <h3>Practice Problems:</h3>
+    <ol>
+      <li><a href="#problem1">Reverse Linked List</a></li>
+      <li><a href="#problem2">Merge Two Sorted Lists</a></li>
+      <li><a href="#problem3">Linked List Cycle</a></li>
+      <li><a href="#problem4">Palindrome Linked List</a></li>
+    </ol>
+
+    <hr />
+
+    <h2 id="problem1">1. Reverse Linked List</h2>
+
+    <h3>Objective:</h3>
+    <p>Reverse a singly linked list.</p>
+
+    <h3>Test Cases:</h3>
+
+    <pre><code><strong>Example 1:</strong>
+Input: head = [1,2,3,4,5]
+Output: [5,4,3,2,1]
+
+<strong>Example 2:</strong>
+Input: head = [1,2]
+Output: [2,1]
+
+<strong>Example 3:</strong>
+Input: head = []
+Output: []
+</code></pre>
+
+    <h3>Constraints:</h3>
+    <ul>
+      <li>
+        The number of nodes in the list is in the range <code>[0, 5000]</code>.
+      </li>
+      <li>
+        <code>-5000 ≤ Node.val ≤ 5000</code>
+      </li>
+    </ul>
+
+    <h3>Real-World Scenarios:</h3>
+    <p>
+      Reversing a linked list is a fundamental operation with various
+      applications:
+    </p>
+    <ul>
+      <li>
+        <strong>Undo Functionality:</strong> Reversing operations to revert to
+        previous states.
+      </li>
+      <li>
+        <strong>Browser History:</strong> Traversing backward through visited
+        pages.
+      </li>
+      <li>
+        <strong>Data Processing:</strong> Reversing data streams for specific
+        processing needs.
+      </li>
+      <li>
+        <strong>Algorithm Design:</strong> Serving as a building block for more
+        complex algorithms.
+      </li>
+      <li>
+        <strong>Memory Management:</strong> Reversing allocations for cleanup
+        processes.
+      </li>
+    </ul>
+
+    <hr />
+
+    <h2 id="problem2">2. Merge Two Sorted Lists</h2>
+
+    <h3>Objective:</h3>
+    <p>
+      Merge two sorted singly linked lists and return it as a new sorted list.
+      The new list should be made by splicing together the nodes of the first
+      two lists.
+    </p>
+
+    <h3>Test Cases:</h3>
+
+    <pre><code><strong>Example 1:</strong>
+Input: l1 = [1,2,4], l2 = [1,3,4]
+Output: [1,1,2,3,4,4]
+
+<strong>Example 2:</strong>
+Input: l1 = [], l2 = []
+Output: []
+
+<strong>Example 3:</strong>
+Input: l1 = [], l2 = [0]
+Output: [0]
+</code></pre>
+
+    <h3>Constraints:</h3>
+    <ul>
+      <li>
+        The number of nodes in both lists is in the range <code>[0, 50]</code>.
+      </li>
+      <li>
+        <code>-100 ≤ Node.val ≤ 100</code>
+      </li>
+      <li>
+        Both <code>l1</code> and <code>l2</code> are sorted in non-decreasing
+        order.
+      </li>
+    </ul>
+
+    <h3>Real-World Scenarios:</h3>
+    <p>Merging sorted linked lists is useful in various applications:</p>
+    <ul>
+      <li>
+        <strong>Database Operations:</strong> Merging sorted datasets
+        efficiently.
+      </li>
+      <li>
+        <strong>Parallel Computing:</strong> Combining results from parallel
+        processes.
+      </li>
+      <li><strong>File Merging:</strong> Combining sorted files or logs.</li>
+      <li>
+        <strong>Inventory Management:</strong> Consolidating sorted inventory
+        lists.
+      </li>
+      <li>
+        <strong>Real-Time Data Streams:</strong> Merging multiple sorted data
+        streams for real-time processing.
+      </li>
+    </ul>
+
+    <hr />
+
+    <h2 id="problem3">3. Linked List Cycle</h2>
+
+    <h3>Objective:</h3>
+    <p>
+      Given a linked list, determine if it has a cycle in it. There is a cycle
+      if some node in the list can be reached again by continuously following
+      the next pointer.
+    </p>
+
+    <h3>Test Cases:</h3>
+
+    <pre><code><strong>Example 1:</strong>
+Input: head = [3,2,0,-4], pos = 1
+Output: true
+<strong>Explanation:</strong> There is a cycle in the linked list, where the tail connects to the second node.
+
+<strong>Example 2:</strong>
+Input: head = [1,2], pos = 0
+Output: true
+<strong>Explanation:</strong> There is a cycle in the linked list, where the tail connects to the first node.
+
+<strong>Example 3:</strong>
+Input: head = [1], pos = -1
+Output: false
+<strong>Explanation:</strong> There is no cycle in the linked list.
+</code></pre>
+
+    <h3>Constraints:</h3>
+    <ul>
+      <li>
+        The number of the nodes in the list is in the range
+        <code>[0, 10<sup>4</sup>]</code>.
+      </li>
+      <li>
+        <code>-10<sup>5</sup> ≤ Node.val ≤ 10<sup>5</sup></code>
+      </li>
+      <li>
+        <code>pos</code> is <code>-1</code> or a valid index in the linked-list.
+      </li>
+    </ul>
+
+    <h3>Real-World Scenarios:</h3>
+    <p>Detecting cycles in linked structures is crucial in various systems:</p>
+    <ul>
+      <li>
+        <strong>Network Routing:</strong> Preventing infinite loops in routing
+        protocols.
+      </li>
+      <li>
+        <strong>Memory Management:</strong> Detecting circular references that
+        can lead to memory leaks.
+      </li>
+      <li>
+        <strong>Data Validation:</strong> Ensuring data integrity in linked data
+        structures.
+      </li>
+      <li>
+        <strong>Graph Algorithms:</strong> Detecting cycles within graph
+        representations.
+      </li>
+      <li>
+        <strong>Dependency Management:</strong> Identifying circular
+        dependencies in software modules.
+      </li>
+    </ul>
+
+    <hr />
+
+    <h2 id="problem4">4. Palindrome Linked List</h2>
+
+    <h3>Objective:</h3>
+    <p>Given a singly linked list, determine if it is a palindrome.</p>
+
+    <h3>Test Cases:</h3>
+
+    <pre><code><strong>Example 1:</strong>
+Input: head = [1,2,2,1]
+Output: true
+
+<strong>Example 2:</strong>
+Input: head = [1,2]
+Output: false
+
+<strong>Example 3:</strong>
+Input: head = [1,2,3,2,1]
+Output: true
+</code></pre>
+
+    <h3>Constraints:</h3>
+    <ul>
+      <li>
+        The number of nodes in the list is in the range
+        <code>[1, 10<sup>5</sup>]</code>.
+      </li>
+      <li>
+        <code>0 ≤ Node.val ≤ 9</code>
+      </li>
+    </ul>
+
+    <h3>Real-World Scenarios:</h3>
+    <p>
+      Checking for palindromic structures in data can be applied in several
+      areas:
+    </p>
+    <ul>
+      <li>
+        <strong>Data Validation:</strong> Ensuring data integrity by verifying
+        symmetrical patterns.
+      </li>
+      <li>
+        <strong>Genetics:</strong> Identifying palindromic sequences in DNA
+        strands.
+      </li>
+      <li>
+        <strong>Cryptography:</strong> Detecting patterns that may indicate
+        encoding or encryption.
+      </li>
+      <li>
+        <strong>Bioinformatics:</strong> Analyzing biological sequences for
+        symmetrical properties.
+      </li>
+      <li>
+        <strong>Error Detection:</strong> Identifying anomalies in data streams
+        that exhibit palindromic characteristics.
+      </li>
+    </ul>
+  </body>
+</html>
