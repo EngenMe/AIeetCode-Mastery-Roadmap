@@ -1,10 +1,10 @@
 const LinkedList = require('./LinkedList');
 
-function reverseLinkedList(head) {
-  if (!head.length || head.length === 1) return head;
+function reverseLinkedList(arr) {
+  if (!arr.length || arr.length === 1) return arr;
   const list = new LinkedList();
 
-  list.fillWithArray(head);
+  list.fillWithArray(arr);
 
   let prev = null;
   let current = list.head;

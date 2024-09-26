@@ -28,6 +28,15 @@ module.exports = class LinkedList {
     return result;
   }
 
+  static toArray(current) {
+    const result = [];
+    while (current) {
+      result.push(current.data);
+      current = current.next;
+    }
+    return result;
+  }
+
   fillWithArray(arr) {
     arr.forEach((element) => {
       this.append(element);
